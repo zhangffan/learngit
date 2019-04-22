@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+			.word{
+				position:relative;
+				left:130px;
+			}
+			.word1{
+				
+				margin-left:170px;
+				margin-top: 10px;
+				font-size: 20px;
+			}
+			.pic{
+				height:100px;
+				position:relative;
+				top:30px;
+			}
+			.word2{
+				position:relative;
+				left:177px;
+			}
+			.btn{
+				position:relative;
+				top:30px;
+				left:130px;
+			}
+			#btn{
+				margin-right:20px;
+			}
+			.hr{
+				position:relative;
+				top:40px;
+			}
+			.pic1{
+				position:relative;
+				top:40px;
+			}
+			.word3{
+				position:relative;
+				top:10px;
+			}
+			.word4{
+				position:relative;
+				top:-70px;
+				left:30px;
+			}
+			.word5{
+				position:relative;
+				top:-40px;
+				left:136px;
+			}
+			
+			.pic3{
+				position:relative;
+				left:20px;
+				top:40px;
+			}
+			.pic2{
+				width:100px;
+				height:100px;
+			}
+			.pic11{
+				width:35px;
+				height:35px;
+			}
+			.word33{
+				font-size: 15px;
+				position:relative;
+				top:-10px;
+				margin-right:10px;
+				margin-left:10px;
+			}
+			#btn1{
+				position: relative;
+				top: 70px;
+				left: 50px;
+				width: 100px;
+				height: 40px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">	
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的钱包</h1>
+		</header>
+		<div class="mui-content mui-scroll-wrapper"> 
+			<div class="pic">
+				<span class="word">累计收益（童书币）</span>
+				<br>
+				<p class="word1">0</p>		
+			</div>
+			<hr>
+			<div>
+				<span>可用童书币</span>
+				<br>
+				<span  class="word2">0</span>
+				<div class="btn">
+				<button type="button" class="mui-btn mui-btn-danger" id="btn">充值</button>
+                <button type="button" class="mui-btn mui-btn-danger">提现</button>
+               </div>     
+			</div>
+			<hr class="hr">
+			<div class="pic1">
+				<span>是否支付押金：否</span>
+				<br>
+				<span class="word3">已借书目:0本</span>
+				
+				<button type="button" id="btn1" class="mui-btn mui-btn-danger">充值会员</button>
+		    
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('btn1').addEventListener('tap',function(){
+					mui.confirm('充值会员需要支付199元押金','是否继续充值',['确定','取消'],function (e) {
+						 
+						    if(e.index==1){
+						    	mui.openWindow({
+						 			url : 'huiyuan.html',
+						 			id  : 'huiyuan.html',
+						 			styles:{
+								      	top: '0px',//设置距离顶部的距离
+						                bottom: '0px'//设置距离底部的距离
+						                //popGesture: "close"
+								   	},
+								   	show:{
+								      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+								      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+								      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+								    },
+								    waiting:{
+								      	autoShow:false,//自动显示等待框，默认为true
+								      	title:'正在加载...',//等待对话框上显示的提示内容
+								      	
+								    }
+						 		})
+				    		
+						    }else{
+						    	mui.openWindow({
+						 			url : 'huiyuan.html',
+						 			id  : 'huiyuan.html',
+						 			styles:{
+								      	top: '0px',//设置距离顶部的距离
+						                bottom: '0px'//设置距离底部的距离
+						                //popGesture: "close"
+								   	},
+								   	show:{
+								      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+								      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+								      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+								    },
+								    waiting:{
+								      	autoShow:false,//自动显示等待框，默认为true
+								      	title:'正在加载...',//等待对话框上显示的提示内容
+								      	
+								    }
+						 		})
+						    }
+						
+					},'div')
+    				
+				})
+			})
+		</script>
+	</body>
+
+</html>

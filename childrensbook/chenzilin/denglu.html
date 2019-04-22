@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+			body{
+				background:url(../images/1.jpg);
+			}
+			form{
+				width:80%;
+				height:90px;
+				margin-top:210px;
+				margin-left:40px;
+				
+			}
+			.button{
+				margin-top: 50px;
+				margin-left:100px;
+			}
+			.word{
+				margin-top:80px ;
+				text-align: center;
+			}
+			.line{
+				width:80%;
+				height:1px;
+				background:grey;
+				margin-left: 35px;
+			}
+			.qq{
+			
+				margin-top: 50px;
+				margin-left:30px;
+			}
+			.weixin{
+				margin-top:-25px;
+				margin-left:230px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form class="mui-input-group" style="border:1px solid black;" >
+    <div class="mui-input-row" style="height:45px;border-bottom: 1px solid black;">
+        <label>手机号</label>
+    <input type="text" class="mui-input-clear" placeholder="请输入手机号">
+    </div>
+    <div class="mui-input-row" style="height:45px">
+        <label>密码</label>
+        <input type="password" class="mui-input-password" placeholder="请输入密码">
+    </div>
+    </form>
+    <div class="button">
+   <button type="button" class="mui-btn mui-btn-primary"style="margin-right: 50px;" id="a2">注册</button>
+   <button type="button" class="mui-btn mui-btn-danger" id="a1">登录</button>
+    </div>
+    <div class="word">
+    	第三方登录
+    </div>
+    <div class="line"></div>
+    <div class="qq">
+    	<span class="mui-icon mui-icon-qq"></span>
+    	<span>QQ登录</span>
+    </div>
+    <div class="weixin">
+    	<span class="mui-icon mui-icon-weixin"></span>
+    	<span>微信登录</span>
+    </div>
+
+
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('a1').addEventListener('tap',function(){
+		    		mui.openWindow({
+			 			url : '../dibulan.html',
+			 			id  : '../dibulan.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a2').addEventListener('tap',function(){
+		    		mui.openWindow({
+			 			url : '../yuanchen/zhuce.html',
+			 			id  : '../yuanchen/zhuce.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+			})
+		</script>
+	</body>
+
+</html>

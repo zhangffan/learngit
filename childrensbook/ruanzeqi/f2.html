@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+			<style type="text/css">
+			.ul1{
+				height:100px;
+				margin-top:45px;
+			}
+			.ul2{
+				position:absolute;
+				left:0px;
+				top:200px;
+				height:120px;
+			}
+			li{
+				list-style:none;
+			}
+			.li1{
+				list-style:none;
+				margin-top:100px;
+			}
+			.li2{
+				list-style:none;
+				margin-top:5px;
+			}
+			#mess{
+				width:180px;
+				height:30px;
+			}
+			.mui-btn-warning{
+				height:50px;
+				width:200px;
+				position:absolute;
+				top:400px;
+				left:80px;
+			}
+			.mui-btn-royal{
+				height:45px;
+				width:180px;
+				position:absolute;
+				top:300px;
+				left:90px;
+			}
+	</style>
+	</head>
+	<body>
+			<header class="mui-bar mui-bar-nav">
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	<h1 class="mui-title">订单取消</h1>
+	</header>
+	<ul class="ul1">
+		<li class="li1">等待对方处理取消订单</li>
+		<li class="li2">还剩x天x时x秒</li>
+		<hr/>
+		<ul class="ul2">
+		<li >若对方同意：取消成功</li>
+		<li >若对方拒绝：你可以联系对方协商处理</li>
+		<li >若对方超时不响应：系统将为您自动取消</li>
+	<ul>
+	</ul>
+	<hr/>
+		<button type="button" class="mui-btn mui-btn-royal" id="b1">联系客服</button>
+		<button type="button" class="mui-btn mui-btn-warning" id="b2">完成</button>
+	</body>
+	<script src="js/mui.js"></script>
+	<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+			document.getElementById('b1').addEventListener('tap',function(){	
+		    	mui.openWindow({
+			 		url : '../yuanchen/pingtai.html',
+			 		id  : '../yuanchen/pingtai.html',
+			 		styles:{
+					    top: '0px',//设置距离顶部的距离
+			            bottom: '0px'//设置距离底部的距离
+			            //popGesture: "close"
+					},
+					show:{
+					    autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					    aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					    duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					},
+					waiting:{
+					    autoShow:false,//自动显示等待框，默认为true
+					    title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					}
+			 	})	
+    		})
+			document.getElementById('b2').addEventListener('tap',function(){	
+		    	mui.openWindow({
+			 		url : '../daiquxiao.html',
+			 		id  : '../daiquxiao.html',
+			 		styles:{
+					    top: '0px',//设置距离顶部的距离
+			            bottom: '0px'//设置距离底部的距离
+			            //popGesture: "close"
+					},
+					show:{
+					    autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					    aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					    duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					},
+					waiting:{
+					    autoShow:false,//自动显示等待框，默认为true
+					    title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					}
+			 	})	
+    		})
+		})
+    </script>
+</html>

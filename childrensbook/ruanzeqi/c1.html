@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<style type="text/css">
+			.ul1{
+						
+				}
+			.ul3{
+				height:150px;
+			}
+			.ul2 .li1{
+				padding:10px 20px;
+				display:inline-block;
+				margin-left:45px;
+				margin-top:-10px;
+				margin-bottom:-10px;
+			}
+			li{
+				margin-left:62px;
+				margin-top:10px;
+			}
+			.mui-btn-warning{
+				width:80px;
+				margin-top:40px;
+			}
+			.a1{
+				margin-left:50px;
+			}
+			.a2{
+				margin-left:50px;
+			}
+			#b2{
+				margin-left: 110px;
+			}
+			#pic{
+				margin-left: 90px;
+				width: 100px;
+				height: 100px;
+			}
+			</style>
+				<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('b2').addEventListener('tap',function(){
+    				mui.openWindow({
+				 			url : 'lishishouyi.html',
+				 			id  : 'lishishouyi.html',
+				 			styles:{
+						      	top: '0px',//设置距离顶部的距离
+				                bottom: '0px'//设置距离底部的距离
+				                //popGesture: "close"
+						   	},
+						   	show:{
+						      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+						      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+						      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						    },
+						    waiting:{
+						      	autoShow:false,//自动显示等待框，默认为true
+						      	title:'正在加载...',//等待对话框上显示的提示内容
+						      	
+						    }
+				 		})
+		    		
+    			})
+				
+			})
+		</script>
+	</head>
+	
+	<body>
+	<header class="mui-bar mui-bar-nav">
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	<h1 class="mui-title">图书收益情况</h1>
+	</header>	
+	<div class="mui-content">
+		<ul class="ul1">
+			<img src="../images/24.png" id="pic"/>
+		</ul><hr/>
+			<ul class="ul2">
+				<li style="list-style:none;"class="li1">书名:《xxx》</li>
+				
+				<li style="list-style:none;">ISBN:xxx</li>
+				<li style="list-style:none;">定价:xx元</li>
+				<li style="list-style:none;">出版社:xxxxx</li>
+				<li style="list-style:none;">出版日期:xxxxxxx</li>
+				<li style="list-style:none;">页数:xxx页</li>
+				<li style="list-style:none;">装帧:xxx</li>
+				<li style="list-style:none;">作者:xxx</li>
+			</ul><hr/>
+				<ul class="ul3">
+					
+					<button type="button" class="mui-btn mui-btn-warning a2" id="b2">收益</button>
+					</ul>
+		</div>
+	</body>
+
+</html>

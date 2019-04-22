@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.css" />
+      	<link rel="stylesheet" type="text/css" href="css/mui.poppicker.css" />
+      	
+      	
+		<style type="text/css">
+			.top{
+				width: 100%;
+				height: 80px;
+				background: orange;
+			}
+			.top-cricle{
+				float: left;
+				width: 60px;
+				height: 60px;
+				background: white;
+				border-radius: 50%;
+				position: relative;
+				top: 10px;
+				left: 10px;
+			}
+		/*选项卡*/
+			 .under_padded {
+				background: rgb(238,238,238);margin: 0px;padding: 8px;
+			}
+			/** 设置 选项卡颜色，字体颜色 **/
+			 .under_control{
+				font-size: 18px;border:none;
+			}
+			 .mui-segmented-control .mui-control-item.mui-active {
+				color: rgb(248, 181, 1);background:rgb(238,238,238);text-decoration: none;border-bottom: 2px solid;padding-bottom:1px;
+				
+			}
+			/** 设置 选项卡 高度（默认38px） **/
+			
+			 .mui-segmented-control .mui-control-item {
+				line-height: 38px;text-align:center;color:gray;border:none;
+				
+			}
+			.mui-table-view-cell{
+				background: rgb(238, 238, 238);
+			}
+			
+			/*1的内容*/
+			.adress{
+				width: 100%;
+				height: 50px;
+				background:whitesmoke;
+			}
+			.adress .mui-icon-home{
+				font-size: 32px;
+				color: gray;
+				line-height: 50px;
+				float: left;
+				padding-left: 10px;
+			}
+			.adress-text{
+				float: left;
+				font-size:18px;
+				color: black;
+				line-height: 50px;
+				padding-left: 10px;
+			}
+			.mui-icon-arrowright{
+				font-size: 18px;
+				line-height: 50px;
+				padding-left:5px ;
+			}
+			.status{
+				float: right;
+				color: orangered;
+				line-height:50px ;
+				padding-right: 20px;
+			}
+			
+			
+			
+			/*book*/
+			.book{
+				padding-left: 10px;
+				width: 100%;
+				height: 180px;
+				background: rgba(0,0,0,0.1);
+			}
+			.book .mui-radio{
+				margin-top:60px;
+			}
+			.img{
+				margin-left: 10px;
+				margin-top:10px;
+				float: left;
+				width:110px;
+				height: 140px;
+				background: url(img/fengmian.jpg);
+				background-repeat:no-repeat;
+				 background-size:100% 100%;
+			}
+			.book-text{
+				
+				float: left;
+				line-height: 30px;
+				margin-top: 30px;
+				margin-left: 30px;
+			}
+			.book-text p{
+				font-size: 16px;
+				color:darkorange;
+				
+			}
+			
+			
+			
+			/*bottom*/
+			.mui-radio{
+				margin-top:12px;
+				height:35px;
+				width: 60px;
+				float: left;
+			}
+			.choseall{
+				font-size: 16px;
+				float: left;
+				line-height: 60px;
+				color: dimgray;
+			}
+			.bottom-tab{
+				position: fixed;
+				bottom: 0px;
+				width: 100%;
+				height: 60px;
+				background: lightgray;
+			}
+			.money{
+				position:fixed;
+				right: 120px;
+				float: left;
+				width: 100px;
+				height: 100%;
+			}
+			.money2{
+				position: fixed;
+				right: 120px;
+				float: left;
+				width: 50px;
+				height: 100%;
+			}
+			.money2 p{
+				line-height: 60px;
+				color: red;
+			}
+			.money p{
+				font-size: 16px;
+				line-height: 60px;
+				color: dimgray;
+			}
+			
+			#timeChoose{
+				float: right;
+				width: 120px;
+				height: 100%;
+				background: orange;
+			}
+			#timeChoose p{
+				color: white;
+				font-size: 20px;
+				text-align: center;
+			}
+			.bottom-right .mui-radio{
+				width: 30px;
+				float: left;
+			}
+			
+			#mask{
+				border-radius: 3px;				
+				float: left;
+				width: 50%;
+				height: 300px;
+				background: black;
+				position:absolute;
+				z-index:999;
+				margin-left:21%;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="top mui-bar mui-bar-nav mui-bar-nav-bg">
+	    	<div class="top-cricle"></div>
+	    	<h1 class="mui-title" style="font-size: 22px;line-height: 80px;">物 流</h1>
+	    	<a id="icon-menu" class="mui-action-back mui-icon mui-icon-plusempty mui-pull-right" style="font-size: 40px;line-height: 60px;color: white;" ></a>
+		</header>
+		
+		<div id="mask">
+		</div>
+		<div style="margin-top: 80px;">
+			<div class="mui-content-padded " style="margin: 0px;padding: 8px;" >
+				<div class="mui-segmented-control " style="font-size: 18px;border:none;">
+					<a class="mui-control-item mui-active" href="#uitem1" >待收取</a>
+					<a class="mui-control-item "  href="#uitem2">待配送</a>
+					<a class="mui-control-item "  href="#uitem3">待收货</a>
+					<a class="mui-control-item " href="#uitem4">抢单</a>
+					<a class="mui-control-item " href="#uitem5">已取消</a>
+				</div>
+			</div>
+			<div id="uitem1" class="mui-control-content mui-active">
+				<div class="adress">
+					<span class="mui-icon mui-icon-home">
+					</span>
+					<p class="adress-text">湖望社区</p>
+					<span class="mui-icon mui-icon-arrowright"></span>
+					<p class="status">未收取</p>
+					
+				</div>
+				<div class="book">
+					<div class="mui-input-row mui-radio">
+					<input name="radio1" type="radio">
+					</div>
+					
+					<div class="img">
+						<!--书本封面-->
+						
+					</div>
+					
+					<div class="book-text">
+						<p>书籍名称:请谢谢<br />类型：绘本<br />收货地址：银瀑布家园</p>
+					</div>
+				</div>
+			</div>
+			<div id="uitem2" class="mui-control-content mui-active">
+				
+			</div>
+			<div id="uitem3" class="mui-control-content mui-active">
+				
+			</div>
+			<div id="uitem4" class="mui-control-content mui-active">
+				
+			</div>
+			<div id="uitem5" class="mui-control-content mui-active">
+				
+			</div>
+			
+			
+			
+			
+			
+		</div>
+		
+		<div class="bottom-tab">
+				<div class="mui-input-row mui-radio">
+					
+					<input name="radio1" type="radio">
+					
+				</div>
+				<div class="choseall">
+					全选
+				</div>
+				<div class="money">
+					
+					<p>合 计</p>
+				</div>
+				<div class="money2">
+					<p>￥0.0</p>
+				</div>
+					<button id='timeChoose' class="block_right mui-btn mui-btn-block" type='button' style="width: 100px;margin-right: 0px;">
+						<p>
+							发布抢单
+						</p></button>
+			</div>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+		        swipeBack:true //启用右滑关闭功能
+		      });
+			
+			var timeChoose=$("#timeChoose")[0];
+			if(timeChoose)
+			{				
+			  document.querySelector("#timeChoose").addEventListener("tap",function(){
+			  	var dtpicker=new mui.DtPicker({"type":"date","beginYear":1950,"endYear":2000,"value":"1980-01-01"}); 
+			    dtpicker.show(function(items){
+			    	$("#timeChoose")[0].innerHTML=items.text;
+			    	dtpicker.dispose();
+			    });
+			  });			
+		  }
+			
+
+		</script>
+	</body>
+
+</html>

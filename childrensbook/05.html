@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			*{
+				text-align: center;
+			}
+			span{
+				
+				
+			}
+			.aa{
+				border: 1px solid red;
+				margin-left: 100px;
+				margin-top:150px ;
+				height: 150px;
+				width: 200px;
+				
+			}
+			button{
+				margin-top: 40px;
+				margin-left: 7px;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="aa">
+			<br /><span>请选择</span><br />
+			<button type="button" id="b1">扫码上传</button>
+			<button type="button" id="b2">扫码借书</button>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('b1').addEventListener('tap',function(){
+		    		mui.openWindow({
+			 			url : 'ruanzeqi/d3.html',
+			 			id  : 'ruanzeqi/d3.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('b2').addEventListener('tap',function(){
+		    		mui.openWindow({
+			 			url : 'ruanzeqi/d4.html',
+			 			id  : 'ruanzeqi/d4.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+			})
+		</script>
+	</body>
+
+</html>

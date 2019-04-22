@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content" id="buluo">
+		
+		<div id="slider" class="mui-slider mui-fullscreen">
+			<div id="buluo" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<div class="titleList">
+	                <a class="mui-control-item paddingNone mui-active " href="#item1mobile" data-id="0"  >
+	                    推荐
+	                </a>
+	                <a class="mui-control-item paddingNone" href="#item2mobile" data-id="1"  >
+	                    关注
+	                </a>
+	                <a class="mui-control-item paddingNone" href="#item3mobile" data-id="2" >
+	                    活动
+	                </a>
+	                
+	            </div>
+			</div>
+			 <div class="mui-slider-group">
+			 	<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+	               推荐
+           		</div>
+           		<div id="item2mobile" class="mui-slider-item mui-control-content">
+	               关注
+           		</div>
+           		<div id="item3mobile" class="mui-slider-item mui-control-content">
+	                活动
+           		</div>
+           		
+			 </div>
+		</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			/*window.onload=function(){
+				var buluo=document.getElementById("buluo");
+				buluo.style.display="block";
+			}*/
+		</script>
+	</body>
+	
+</html>

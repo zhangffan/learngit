@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.box{
+				margin-top: 100px;
+			}
+			#a{
+				margin-left: 60px;
+			}
+			#a2{
+				width: 150px;
+			}
+			.a{
+				margin-left: 60px;
+			}
+			.tip{
+				margin: 30px 0 0 60px;
+			}
+			.box2{
+				margin-left: 60px;
+			}
+			#a3{
+				margin-left: 120px;
+				margin-top: 30px;
+				background: #f54545;
+				color: #fff;
+				height: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">上传确认</h1>
+		</header>
+		<div class="mui-content">
+			<div class="box">
+				<span id="a">请填写租金:</span>
+				<input type="text" id="a2"/>
+				<p class="a">租金不得高于图书总额的8%</p>
+			</div>
+			<div class="tip">
+				提示
+			</div>
+			<p class="box2">
+				若选择永久共享，用户将收到丰厚的童书币，当书籍被借阅者再次共享用户也将获得一部分奖励，
+				书籍越受欢迎被共享次数越多获得奖励也越多，童书币可以用于下一次借阅童书，或购买其他增值服务
+			</p>
+			<button id="a3">确认为永久共享</button>
+		</div>
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('a3').addEventListener('tap',function(){
+    				mui.openWindow({
+				 			url : '../chenzilin/shufang1.html',
+				 			id  : '../chenzilin/shufang1.html',
+				 			styles:{
+						      	top: '0px',//设置距离顶部的距离
+				                bottom: '0px'//设置距离底部的距离
+				                //popGesture: "close"
+						   	},
+						   	show:{
+						      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+						      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+						      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						    },
+						    waiting:{
+						      	autoShow:false,//自动显示等待框，默认为true
+						      	title:'正在加载...',//等待对话框上显示的提示内容
+						      	
+						    }
+				 		})
+		    		
+    			})
+				
+			})
+		</script>
+	</body>
+
+</html>

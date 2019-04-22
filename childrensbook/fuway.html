@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			#way1{
+				margin-left: 120px;
+				margin-top: 50px;
+				font-size: 20px;
+				
+			}
+			#way2{
+				margin-left: 120px;
+				margin-top: 50px;
+				font-size: 20px;
+			}
+			#ka{
+				margin-right: 50px;
+			}
+			#bi{
+				margin-right: 50px;
+			}
+			#t1{
+				margin-left: 20px;
+				margin-top: 30px;
+			}
+			#sure{
+				position: absolute;
+				background: #f37e0d;
+				color: #fff;
+				width: 100px;
+				height: 50px;
+				right: 0px;
+			}
+			#money{
+				position: relative;
+				left: 170px;
+				top: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">	
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">支付</h1>
+		</header>
+		<div class="mui-content">
+			<h4 id="t1">请选择支付方式</h4>
+			<div id="way1">
+				<input type="radio" id="ka"/>借书卡
+			</div>
+			<div id="way2">
+				<input type="radio" id="bi"/>童书币
+			</div>
+			<nav class="mui-bar mui-bar-tab">
+				<span id="money">合计：¥3</span>
+				<button type="button" id="sure">确认支付</button>
+			</nav>
+			
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('sure').addEventListener('tap',function(){
+					mui.confirm('当前借书卡可用余额:¥100','是否使用借书卡',['是','否'],function (e) {
+						 
+						    if(e.index==1){
+						    	
+				    		
+						    }else{
+						    	mui.openWindow({
+						 			url : 'chenzilin/fukuan.html',
+						 			id  : 'chenzilin/fukuan.html',
+						 			styles:{
+								      	top: '0px',//设置距离顶部的距离
+						                bottom: '0px'//设置距离底部的距离
+						                //popGesture: "close"
+								   	},
+								   	show:{
+								      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+								      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+								      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+								    },
+								    waiting:{
+								      	autoShow:false,//自动显示等待框，默认为true
+								      	title:'正在加载...',//等待对话框上显示的提示内容
+								      	
+								    }
+						 		})
+						    }
+						
+					},'div')
+    				
+				})
+			})
+		</script>
+	</body>
+
+</html>

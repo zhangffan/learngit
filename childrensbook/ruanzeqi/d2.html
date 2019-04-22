@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<style type="text/css">
+			.ul2{
+				position: absolute;
+				top:400px;
+			}
+			.mui-btn-warning{
+    		width:180px;
+    		margin-top:55px;
+    		margin-left:60px;
+    		height:60px;
+    		font-size:30px;
+    		letter-spacing:10px
+    	}
+			</style>
+				<script src="js/mui.js"></script>
+		 <script type="text/javascript" charset="utf-8">
+        document.addEventListener( "plusready", function(){
+            mui.init();
+            mui.plusReady(function(){
+				document.getElementById('b1').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'c.html',
+			 			id  : 'c.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				
+			})
+        });
+        function getCamera(){
+            var cam = plus.camera.getCamera();
+            //字符串数组,摄像头支持的拍照分辨率
+            var Resolutions = cam.supportedImageResolutions[0];
+            //字符串数组,摄像头支持的拍照文件格式
+            var Formats = cam.supportedImageFormats[0];
+            //调用拍照方法
+            //capturedFile,拍照完成后，照片的存放地址
+            cam.captureImage(function(capturedfile){
+                //拍照成功
+                alert(capturedfile);//打印一下
+            },function(){
+               //拍照失败
+            },{
+                //拍照参数
+                format : Formats,
+                index : 1//1表示主摄像头，2表示辅摄像头
+            });
+            var Resolutions = cam.supportedImageResolutions[0];
+            //字符串数组，摄像头支持的拍照文件格式
+            var Formats = cam.supportedImageFormats[0];
+            //调用拍照方法
+            //capturedFile,拍照完成后，照片的存放地址
+            cam.captureImage(function(capturedFile){
+                //拍照成功
+                alert(capturedFile);//打印一下
+               //调用系统方法,根据照片地址获取照片
+                plus.io.resolvLocalFileSystemURL(capturedFile,
+                    //成功的回调函数
+                    //entry文件的相关信息
+                    function(entry){
+                        var img = document.createElement("img");
+                        img.src = entry.toLocalURL();
+                        document.documentElement.appendChild(img);
+                    },function(){
+                        //失败的回调函数
+                    });
+            });
+        }
+    </script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	<h1 class="mui-title">扫描条形码</h1>
+	<ul class="ul1">
+	</ul>
+		<ul class="ul2">
+			<hr/>
+				<button type="button" class="mui-btn mui-btn-warning" id="b1">扫描  </button>
+			</ul>
+	</header>
+	</body>
+</html>

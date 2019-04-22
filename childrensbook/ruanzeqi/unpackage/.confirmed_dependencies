@@ -1,0 +1,14 @@
+{
+	"index.html": {
+		"resources": [
+			"tab-home.html",
+			"tab-found.html"
+		],
+		"refer": [
+			"tab-home.html",
+			"tab-found.html",
+			"tab-message.html",
+			"tab-ucenter.html"
+		]
+	}
+}

@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+			.pic{
+				width:100px;
+				height:100px;
+				
+			}
+			.word{
+				position:relative;
+				top:-90px;
+				left:130px;
+				
+			}
+			.word1{
+				position:relative;
+				top:-80px;
+				left:130px;
+			}
+			.word2{
+				position:relative;
+				top:-70px;
+				left:130px;
+			}
+			.pic1{
+				position:relative;
+				top:-80px;
+				left:20px;
+			}
+			.pic2{
+				width:100px;
+				height:10px;
+				position:relative;
+				top:-175px;
+				left:240px;
+				
+			}
+			#yongjiu{
+				position:relative;
+				top:-170px;
+				left:240px;
+				width:86px;
+				height:40px;
+				background:white;
+				line-height: 40px;
+				text-align:center;
+			}
+			#a{border:1px solid black;
+			   width:125px;
+			   height:50px;
+			   line-height: 50px;
+			   text-align:center;
+				
+			}
+			#b{border:1px solid black;
+			   width:125px;
+			   height:50px;
+			   line-height: 50px;
+			   text-align:center;
+			   position:relative;
+			   top:-50px;
+			   left:125px;
+			   border-left:none;
+			}
+			#c{border:1px solid black;
+			   width:125px;
+			   height:50px;
+			   line-height: 50px;
+			   text-align:center;
+			   position:relative;
+			   top:-100px;
+			   left:250px;
+			   border-left:none;
+				
+			}
+			#pica{
+				position:relative;
+				top:0px;	
+			}
+			#picb{
+				position:relative;
+				top:0px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">	
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">我的书房</h1>
+		</header>
+		<div class="mui-content mui-scroll-wrapper"> 
+	
+			<div id="a" class="qiehuan"><span>全部</span></div>
+	        <div id="b" class="qiehuan"><span>永久共享</span></div>
+	        <div id="c" class="qiehuan"><span>个人共享</span></div>
+	       
+	       
+	        <div class="pic1">
+	       	<img src="icon/1.jpg" class="pic" id="b1">
+	       	<div>
+	       	<span class="word">书名xxx</span>
+	       	<br>
+	       	<span class="word1">永久共享定价:xxx元</span>
+	       	<br>
+	       	<span class="word2">租金：xxx元/天</span>、
+	       	</div>
+	       	<div id="yongjiu">
+	       	<span class="yongjiu">平台</span>
+	       	</div>    	
+       	</div>
+       
+       
+       
+        <div class="pic1">
+        <div id="pica">
+       	<img src="icon/1.jpg" class="pic" id="b2">
+       	<div>
+       	<span class="word">书名xxx</span>
+       	<br>
+       	<span class="word1">永久共享定价:xxx元</span>
+       	<br>
+       	<span class="word2">租金：xxx元/天</span>、
+       	</div>
+       	<div id="yongjiu">
+       	<span class="yongjiu">平台</span>
+       	</div>    	
+       </div>
+       </div>
+       
+       
+        <div class="pic1">
+        <div id="picb">
+       	<img src="icon/1.jpg" class="pic" id="b3">
+       	<div>
+       	<span class="word">书名xxx</span>
+       	<br>
+       	<span class="word1">永久共享定价:xxx元</span>
+       	<br>
+       	<span class="word2">租金：xxx元/天</span>、
+       	</div>
+       	<div id="yongjiu">
+       	<span class="yongjiu">个人</span>
+       	</div>    	
+       </div>
+		</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			 var QieHuan=document.getElementsByClassName("qiehuan");
+             var pic1=document.getElementsByClassName("pic1");
+		    window.onload=function(){
+		    	for(var i=0;i<QieHuan.length;i++){
+				    play(i);
+					// biao[0].style.display="none";
+				}
+		    }
+		    function play(i){
+		    	QieHuan[i].onclick=function(){
+			    	if(i==0){
+				        pic1[0].style.display="block";
+				        QieHuan[0].style.color="orange";
+				        pic1[1].style.display="none";
+				        QieHuan[1].style.color="black";
+				        pic1[2].style.display="none";
+				        QieHuan[2].style.color="black";
+		    		}
+				    if(i==1){
+				        pic1[1].style.display="block";
+				        QieHuan[1].style.color="orange";
+				        pic1[0].style.display="none";
+				        QieHuan[0].style.color="black";
+				        pic1[2].style.display="none";
+				        QieHuan[2].style.color="black";
+				    }
+				    if(i==2){
+				        pic1[2].style.display="block";
+				        QieHuan[2].style.color="orange";
+				        pic1[0].style.display="none";
+				        QieHuan[0].style.color="black";
+				        pic1[1].style.display="none";
+				        QieHuan[1].style.color="black";
+				    }
+		   		}
+		    }
+		    mui.plusReady(function(){
+			document.getElementById('b1').addEventListener('tap',function(){	
+		    	mui.openWindow({
+			 		url : '../ruanzeqi/c1.html',
+			 		id  : '../ruanzeqi/c1.html',
+			 		styles:{
+					    top: '0px',//设置距离顶部的距离
+			            bottom: '0px'//设置距离底部的距离
+			            //popGesture: "close"
+					},
+					show:{
+					    autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					    aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					    duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					},
+					waiting:{
+					    autoShow:false,//自动显示等待框，默认为true
+					    title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					}
+			 	})	
+    		})
+			document.getElementById('b2').addEventListener('tap',function(){	
+		    	mui.openWindow({
+			 		url : '../ruanzeqi/c1.html',
+			 		id  : '../ruanzeqi/c1.html',
+			 		styles:{
+					    top: '0px',//设置距离顶部的距离
+			            bottom: '0px'//设置距离底部的距离
+			            //popGesture: "close"
+					},
+					show:{
+					    autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					    aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					    duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					},
+					waiting:{
+					    autoShow:false,//自动显示等待框，默认为true
+					    title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					}
+			 	})	
+    		})
+			document.getElementById('b3').addEventListener('tap',function(){	
+		    	mui.openWindow({
+			 		url : '../ruanzeqi/c1.html',
+			 		id  : '../ruanzeqi/c1.html',
+			 		styles:{
+					    top: '0px',//设置距离顶部的距离
+			            bottom: '0px'//设置距离底部的距离
+			            //popGesture: "close"
+					},
+					show:{
+					    autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					    aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					    duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					},
+					waiting:{
+					    autoShow:false,//自动显示等待框，默认为true
+					    title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					}
+			 	})	
+    		})
+			
+		})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		.mui-icon-search{
+			float:right;
+		}
+		td{
+			padding:5px;
+		}
+		.mui-title{
+			position:relative;
+			left:20px;
+		}
+		.mui-icon-back{
+			position:relative;
+			top:-20px;
+		}
+		.mui-icon-search{
+			position:relative;
+			top:4px;
+		}
+		.word{
+				position:relative;
+				top:30px;
+				left:30px;
+				
+			}
+		.border{
+				width:300px;
+				height:100px;
+				border:1px solid black;
+			}
+			
+		.word1{
+				position:relative;
+				top:30px;
+				left:30px;
+				
+			}
+		.border1{
+				width:300px;
+				height:100px;
+				border:1px solid black;
+			}
+		#tuijian{
+			position:relative;
+			top:20px;
+			left:10px;
+		}
+		#guanzhu{
+			position:relative;
+			top:0px;
+			left:0px;
+		}
+		#huodong{
+			position:relative;
+			top:0px;
+			left:0px;
+		}
+				
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">	
+	        <div class="mui-title"><a href="#">推荐</a></div>
+	        <div class="mui-title"><a href="#">关注</a></div>
+	        <div class="mui-title"><a href="#">活动</a></div>   
+			<span class="mui-icon mui-icon-search"></span>
+		</header>
+		<div class="mui-content mui-scroll-wrapper"> 
+			
+		<div id="tuijian" class="biao">
+		<div class="word">
+		<span>评价</span>
+		<div class="border"></div>
+		<pre>作者     点赞      评论     来源</pre>
+		</div>
+		</div>
+		
+		<div id="guanzhu"  class="biao">
+		<div class="mui-card-header mui-card-media">
+	     <img src="../icon/1.jpg">
+	       <div class="mui-media-body">
+		      小M
+		<p>发表于 2016-06-30 15:30</p>
+	      </div>
+          </div>
+        <div class="word1">
+		<span>文案</span>
+		<div class="border1"></div>
+		</div>
+		</div>
+  
+	
+		<div id="huodong"  class="biao">
+			<ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="../icon/1.jpg">
+			            <div class="mui-media-body">
+			                幸福
+			                <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="../icon/1.jpg">
+			            <div class="mui-media-body">
+			                木屋
+			                <p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="../icon/1.jpg">
+			            <div class="mui-media-body">
+			                CBD
+			                <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+		</div>
+</div>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript">
+	mui.init();
+    var MuiTitle=document.getElementsByClassName("mui-title");
+    var biao=document.getElementsByClassName("biao");
+    window.onload=function(){
+    	for(var i=0;i<MuiTitle.length;i++){
+		    play(i);
+			// biao[0].style.display="none";
+		}
+    }
+    function play(i){
+    	MuiTitle[i].onclick=function(){
+	    	if(i==0){
+		        biao[0].style.display="block";
+		        MuiTitle[0].style.color="orange";
+		        biao[1].style.display="none";
+		        MuiTitle[1].style.color="black";
+		        biao[2].style.display="none";
+		        MuiTitle[2].style.color="black";
+    		}
+		    if(i==1){
+		        biao[1].style.display="block";
+		        MuiTitle[1].style.color="orange";
+		        biao[0].style.display="none";
+		        MuiTitle[0].style.color="black";
+		        biao[2].style.display="none";
+		        MuiTitle[2].style.color="black";
+		    }
+		    if(i==2){
+		        biao[2].style.display="block";
+		        MuiTitle[2].style.color="orange";
+		        biao[0].style.display="none";
+		        MuiTitle[0].style.color="black";
+		        biao[1].style.display="none";
+		        MuiTitle[1].style.color="black";
+		    }
+   		}
+    }
+</script>
+</body>
+
+</html>

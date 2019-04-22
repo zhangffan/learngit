@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		.mui-icon-search{
+			float:right;
+		}
+		td{
+			padding:5px;
+		}
+		.mui-title{
+			position:relative;
+			left:20px;
+		}
+		.mui-icon-back{
+			position:relative;
+			top:-20px;
+		}
+		.mui-icon-search{
+			position:relative;
+			top:4px;
+		}
+		.pic{
+			width:80px;
+			height:80px;
+		}
+		.word{
+				position:relative;
+				top:30px;
+				left:30px;
+				
+			}
+		.border{
+				width:300px;
+				height:100px;
+				border:1px solid black;
+			}
+				
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">	
+		<span class="mui-icon mui-icon-back"></span>
+		<table class="mui-title">
+    <tr>
+        <td>推荐</td>
+        <td style="color:orange">关注</td>
+        <td>活动</td>
+    </tr>
+    </table>
+		<span class="mui-icon mui-icon-search"></span>
+		</header>
+		<div class="mui-content mui-scroll-wrapper"> 
+			 <div class="mui-card-header mui-card-media">
+	     <img src="../icon/1.jpg">
+	       <div class="mui-media-body">
+		      小M
+		<p>发表于 2016-06-30 15:30</p>
+	      </div>
+          </div>
+        <div class="word">
+		<span>文案</span>
+		<div class="border"></div>
+		</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item mui-active" id="a1">
+			<span class="mui-icon mui-icon-chatbubble"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		 <a class="mui-tab-item" id="a2">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">联系人</span>
+        </a>
+        <a class="mui-tab-item mui-active" id="a1">
+			<span class="mui-icon mui-icon-plus"></span>
+			
+		</a>
+        <a class="mui-tab-item" id="a3">
+            <span class="mui-icon iconfont icon-faxian"></span>
+            <span class="mui-tab-label">部落</span>
+        </a>
+        <a class="mui-tab-item" id="a4">
+            <span class="mui-icon iconfont icon-wo"></span>
+            <span class="mui-tab-label">我的</span>
+        </a>
+	</nav>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

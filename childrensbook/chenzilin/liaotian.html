@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+			.pic{
+				width:180px;
+				height:160px;
+				position:relative;
+				top:20px;
+				left:90px;
+			}
+			.word1{
+				position:relative;
+				top:70px;
+				left:-35px;
+			}
+			.word{
+				position:relative;
+				top:10px;
+				left:150px;
+			}
+			.word2{
+				position:relative;
+				top:120px;
+				left:40px;
+				
+			}
+			
+			.pic1{
+				margin-top:140px;
+				width:100%;
+				background:#808080;
+				margin-left:-40px;
+			}
+			.aaa{
+				margin-left: 120px;
+				color: white;
+				background: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">	
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">归还成功</h1>
+		</header>
+		<div class="mui-content mui-scroll-wrapper">
+		<span class="word">aiyayay</span>
+			<br>
+		<img src="icon/1.jpg" class="pic">
+		<span class="word1">已确认归还</span>
+		<div class="word2">
+		<button class="aaa" id="b1">评价</button>
+		
+		<div class="pic1">
+			<span class="mui-icon mui-icon-mic"></span>
+			<input type="text" class="mui-input-clear" placeholder="" style="width:300px">
+            <span class="mui-icon mui-icon-plusempty"></span>
+		</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('b1').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'pingjia1.html',
+			 			id  : 'pingjia1.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				
+				
+			})
+		</script>
+	</body>
+
+</html>

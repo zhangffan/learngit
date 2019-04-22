@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/iconfont.css" rel="stylesheet"/>
+    <style type="text/css">
+    	/*.mui-content{
+    		position: absolute;
+    		z-index: 1;
+    	}
+    	#topPopover{
+	    	position: absolute;
+	    	width: 100%; 
+			height: 610px;
+			z-index: 998;
+			background-color: rgba(0,0,0,0.5);
+	    	display: none;	
+	    }*/
+	    #top{
+	    	background: #f37e0d;
+	    	height: 50px;
+	    }
+    	#search{
+    		width: 80%;
+    		height: 30px;
+    		border-radius: 10px;
+    	}
+    	#sch{
+    		position: relative;
+    		left: -50px;
+    	}
+    	#choose{
+    		position: fixed;
+    		top: 50px;
+    		background: #fff;
+    	}
+    	#slider-group{
+    		/*overflow: scroll;
+    		margin-top: 60px;*/
+    	}
+    	.mui-slider{
+    		overflow: auto;
+    	}
+    	
+    	#item1mobile{
+    		overflow: scroll;
+    		margin-top: 60px;
+    		
+    		
+    	}
+    	#item2mobile{
+    		overflow: scroll;
+    		margin-top: 60px;
+    		background: #fff;
+    		
+    	}
+    	.mui-segmented-control{
+    		z-index: 2;
+    	}
+    	.hang{
+    		background: #fff;
+    	}
+    	.title{
+    		padding: 15px;
+    	}
+    	#see{
+    		margin-left: 200px;
+    		color: #f8c18b;
+    	}
+    	#see1{
+    		margin-left: 200px;
+    		color: #f8c18b;
+    	}
+    	#see2{
+    		margin-left: 200px;
+    		color: #f8c18b;
+    	}
+    	.mui-slider .mui-slider-group .mui-slider-item img{
+			width: auto;
+		}
+    	.pic{
+    		width: 80px;
+    		height: 80px;
+    		margin-left: 20px;
+    	}
+    	.pic1{
+    		width: 80px;
+    		height: 80px;
+    		margin-left: 20px;
+    	}
+    	.t1{
+    		font-size: 16px;
+    		margin-left: 50px;
+    	}
+    	.t2{
+    		font-size: 16px;
+    		margin-left: 70px;
+    	}
+    	.ren1{
+    		font-size: 16px;
+    		margin-left: 30px;
+    	}
+    	.ren2{
+    		font-size: 16px;
+    		margin-left: 38px;
+    	}
+    	#hang2{
+    		margin-top: 20px;
+    		height: 150px;
+    	}
+    	.pic2{
+    		width: 80px;
+    		height: 80px;
+    		margin-left: 10px;
+    	}
+    	.des2{
+    		position: relative;
+    		top: -80px;
+    		left: 120px;
+    	}
+    	#hang3{
+    		margin-top: 20px;
+    	}
+    	#di-pic{
+    		
+    	}
+    	#title2{
+    		margin-left: 20px;
+    	}
+    	#book{
+    		width: 100%;
+    		height: 200px;
+    	}
+    	.des3{
+    		background: #f7f7f7;
+    		margin: 0px 10px;
+    		padding: 5px;
+    		height: 120px;
+    	}
+    	#pic4{
+    		width: 80px;
+    		height: 100px;
+    	}
+    	#e1{
+    		font-size: 16px;
+    		position: relative;
+    		top: -105px;
+    		left: 80px;
+    	}
+    	#e2{
+    		
+    		position: relative;
+    		top: -105px;
+    		left: 80px;
+    	}
+    	#e3{
+    		position: relative;
+    		top: -50px;
+    		left: 50px;
+    	}
+    	#pic5{
+    		width: 40px;
+    		height: 40px;
+    	}
+    	#pic5{
+    		position: relative;
+    		top: -90px;
+    		left: 280px;
+    	}
+    	.f{
+    		font-size: 16px;
+    	}
+    	.des4{
+    		position: relative;
+    		top: -80px;
+    		left: 100px;
+    	}
+    	.des5{
+    		position: relative;
+    		top: -80px;
+    		left: 100px;
+    	}
+    	.des6{
+    		position: relative;
+    		top: -80px;
+    		left: 100px;
+    	}
+    	#per1{
+    		margin-left: 10px;
+    	}
+    	#name{
+    		position: relative;
+    		top: -20px;
+    	}
+    	#e4{
+    		position: relative;
+    		top: -80px;
+    		left: 50px;
+    	}
+    	#pic6{
+    		position: relative;
+    		top: -110px;
+    		left: 280px;
+    		width: 40px;
+    		height: 40px;
+    	}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<!--标题栏-->
+	
+	<div class="mui-content">
+		<header class="mui-bar mui-bar-nav" id="top">
+			<div id="head">
+				<input type="text" placeholder="搜索书名、作者" id="search" />
+				<span class="mui-icon mui-icon-search" id="sch"></span>
+				<span class="mui-icon mui-icon-bars" id="c1"></span>
+			</div>
+		</header>
+		
+		<!--选项卡-->
+		<div id="slider1" class="mui-slider mui-fullscreen">
+			<div id="choose" class=" mui-slider-indicator mui-segmented-control">
+				<div class="titleList">
+					
+	                <a class="mui-control-item paddingNone mui-active " href="#item1mobile" data-id="0"  id="b1">
+	                    书圈
+	                </a>
+	                <a class="mui-control-item paddingNone" href="#item2mobile" data-id="1"  id="b2">
+	                    附近
+	                </a>               
+	            </div>
+			</div>
+			<div class="mui-slider-group" id="slider-group">
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div class="hang">
+						<div class="title">
+							<span class="f">推荐专区</span>
+							<span><a href="#" id="see">查看全部</a></span>
+						</div>
+						<img src="images/22.png" class="pic" id="ben"/>
+						<img src="images/23.png" class="pic1"/>
+						<div class="des">
+							<span class="t1">蹦！</span>
+							<span class="t2">哇！</span>
+						</div>
+						<div class="person1">
+							<span class="ren1">松冈达英</span>
+							<span class="ren2">松冈达英</span>
+						</div>
+					</div>	
+					<div class="hang" id="hang2">
+						<div class="title">
+							<span class="f">新书专区</span>
+							<span><a href="#" id="see1">查看全部</a></span>
+						</div>
+						<img src="images/24.png" class="pic2"/>
+						<div class="des2">I can share<br>Karen Katz<br>Karen</div>
+					</div>
+					<div class="hang" id="hang3">
+						<div class="title">
+							<span class="f">精品专区</span>
+							<span><a href="#" id="see2">查看全部</a></span>
+						</div>
+						<img src="images/a3.jpg" class="pic2"/>
+						<div class="des4">《神秘岛——奇妙的冒险之旅》</div>
+						<p class="des5">本书全册，适合1-7岁儿童</p>
+						<p class="des6">《神秘岛——奇妙的冒险之旅》这本书<br />描绘了一个精彩的世界</p>
+					</div>
+				</div>
+				<div id="item2mobile" class="mui-slider-item mui-control-content">
+					<img src="images/25.png" id="di-pic"/>
+					<div id="title2">附近的书</div>
+					<img src="images/30.png" id="per1"/>
+					<span id="name">hzy</span>
+					<div class="des3">
+						<img src="yuanchen/img/timg.jpg" id="pic4"/>
+						<div class="title2">
+							<span id="e1">《火山为什么会爆发?》</span><br />
+							<span id="e2">可借</span>
+							<span id="e3">距离：0.11KM 地址：xxx
+							</span>
+						</div>
+						<img src="images/29.png" id="pic5"/>
+					</div>
+					
+					<img src="images/32.png" id="per1"/>
+					<span id="name">pyl</span>
+					<div class="des3">
+						<img src="images/31.png" id="pic4"/>
+						<div class="title2">
+							<span id="e1">《儿童好品德系列——手不是<br />用来打人的》</span><br />
+							<span id="e2">可借</span>
+							<span id="e4">距离：0.21KM 地址：xxx
+							</span>
+						</div>
+						<img src="images/29.png" id="pic6"/>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+		 	interval:0//自动轮播周期，若为0则不自动播放，默认为0；
+		});
+		function showto(index){
+			var gallery = mui('.mui-slider');
+			gallery.slider().gotoItem(index);
+		}
+		var input=document.getElementsByTagName("input")[0];
+		input.onfocus=function(){
+			this.value="";
+		}
+		input.onblur=function(){
+			this.value="搜索书名、作者";
+		}
+
+		mui.plusReady(function(){
+			document.getElementById('see').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'remen.html',
+		 			id  : 'remen.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			document.getElementById('see1').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'zuixin.html',
+		 			id  : 'zuixin.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			document.getElementById('see2').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'jingxuan.html',
+		 			id  : 'jingxuan.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			document.getElementById('c1').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'jieyue.html',
+		 			id  : 'jieyue.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			document.getElementById('ben').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'book.html',
+		 			id  : 'book.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			document.getElementById('pic4').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'book2.html',
+		 			id  : 'book2.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			
+		});
+		
+
+	</script>
+
+</body>
+</html>

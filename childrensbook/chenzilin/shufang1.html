@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+			#c1{
+				position: absolute;
+				right: 20px;
+			}
+			#xuan{
+	    		margin-top: 50px;
+	    	}
+	    	 .under_padded {
+				background: rgb(238,238,238);margin: 0px;padding: 8px;
+			}
+			#box{
+				border: none;
+			}
+			/** 设置 选项卡颜色，字体颜色 **/
+			 .under_control{
+				font-size: 18px;border:none;
+			}
+			 .mui-segmented-control .mui-control-item.mui-active {
+				color: rgb(248, 181, 1);background:rgb(238,238,238);text-decoration: none;border-bottom: 2px solid;padding-bottom:1px;
+				
+			}
+			/** 设置 选项卡 高度（默认38px） **/
+			
+			 .mui-segmented-control .mui-control-item {
+				line-height: 38px;text-align:center;color:gray;border:none;
+				
+			}
+			.mui-table-view-cell{
+				background: rgb(238, 238, 238);
+			}
+			/*选项卡样式*/
+			.book{
+				position: relative;
+				top: -100px;
+				left: 110px;
+			}
+			.person{
+				position: relative;
+				top: -100px;
+				left: 120px;
+			}
+			.money{
+				position: relative;
+				top: -100px;
+				left: 120px;
+			}
+			.hang{
+				background: #fff;
+				height: 120px;
+				padding: 15px;
+			}
+			.dist{
+				margin-left: 70px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">	
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的书房</h1>
+			<span class="mui-icon mui-icon-bars" id="c1"></span>
+		</header>
+		<div id="xuan">
+			<div class="mui-content-padded ">
+				<div class="mui-segmented-control " id="box">
+					<a class="mui-control-item mui-active" href="#uitem1" >全部</a>
+					<a class="mui-control-item "  href="#uitem2">个人共享</a>
+					<a class="mui-control-item "  href="#uitem3">永久共享</a>
+				</div>
+			</div>
+			<div id="uitem1" class="mui-control-content mui-active">
+				<div class="hang">
+					<img src="../images/24.png" id="pic"/>
+					<div class="book">《I can share》</div>
+					<div class="person">Karen<button class="dist">个人共享</button></div>
+					<div class="money">xxx元/天 </div>
+					
+				</div>
+			</div>
+			<div id="uitem2" class="mui-control-content">
+				<div class="hang">
+					<img src="../images/24.png" id="pic1"/>
+					<div class="book">《I can share》</div>
+					<div class="person">Karen</div>
+					<div class="money">xxx元/天 </div>
+					
+				</div>
+			</div>
+			<div id="uitem3" class="mui-control-content">
+				
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+		    mui.plusReady(function(){
+				document.getElementById('pic').addEventListener('tap',function(){	
+			    	mui.openWindow({
+				 		url : '../ruanzeqi/c1.html',
+				 		id  : '../ruanzeqi/c1.html',
+				 		styles:{
+						    top: '0px',//设置距离顶部的距离
+				            bottom: '0px'//设置距离底部的距离
+				            //popGesture: "close"
+						},
+						show:{
+						    autoShow:true,//页面loaded事件发生后自动显示，默认为true
+						    aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+						    duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						},
+						waiting:{
+						    autoShow:false,//自动显示等待框，默认为true
+						    title:'正在加载...',//等待对话框上显示的提示内容
+						      	
+						}
+				 	})	
+	    		})
+				document.getElementById('pic1').addEventListener('tap',function(){	
+			    	mui.openWindow({
+				 		url : '../ruanzeqi/c1.html',
+				 		id  : '../ruanzeqi/c1.html',
+				 		styles:{
+						    top: '0px',//设置距离顶部的距离
+				            bottom: '0px'//设置距离底部的距离
+				            //popGesture: "close"
+						},
+						show:{
+						    autoShow:true,//页面loaded事件发生后自动显示，默认为true
+						    aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+						    duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						},
+						waiting:{
+						    autoShow:false,//自动显示等待框，默认为true
+						    title:'正在加载...',//等待对话框上显示的提示内容
+						      	
+						}
+				 	})	
+	    		})
+				document.getElementById('c1').addEventListener('tap',function(){	
+			    	mui.openWindow({
+				 		url : '../dibulan.html',
+				 		id  : '../dibulan.html',
+				 		styles:{
+						    top: '0px',//设置距离顶部的距离
+				            bottom: '50px'//设置距离底部的距离
+				            //popGesture: "close"
+						},
+						show:{
+						    autoShow:true,//页面loaded事件发生后自动显示，默认为true
+						    aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+						    duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						},
+						waiting:{
+						    autoShow:false,//自动显示等待框，默认为true
+						    title:'正在加载...',//等待对话框上显示的提示内容
+						      	
+						}
+				 	})	
+	    		})
+			})
+		</script>
+	</body>
+
+</html>

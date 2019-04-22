@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-bar{
+				background: lightsalmon;
+			}
+			h1{
+				text-align: center;
+			}
+			.book{
+				margin-top: 44px;
+				padding: 20px 120px;
+			}
+			.book img{
+				width: 150px;
+				height: 200px;
+			}
+			.name{
+				margin-left: 180px;
+			}
+			.message{
+				float: left;
+				margin: 30px;
+				border: 1px solid red;
+				width: 300px;
+				height: 200px;
+			}
+			.message span{
+				float: left;
+				margin-left: 30px;
+				margin-right: 10px;
+				display: block;
+				margin-top: 20px;
+			}
+			hr{
+				margin-top: 10px;
+				float: left;
+				width:300px;
+				color: red;
+			}
+			.yes{
+				float: left;
+				border: 1px solid red;
+				width: 200px;
+				height: 20px;
+				margin-left: 100px;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>平台书信息</h1>
+		</header>
+		<div class="book">
+			<img src="images/a3.jpg" />
+		</div>
+		<div class="name">神秘岛</div>
+		<div class="message">
+			<span>平台站点1</span>
+			<span>地址：xx街道xx号</span>
+			<span>借书时长：3个月</span>
+			<span class="mui-icon mui-icon-location">50m</span>
+			<hr />
+			<span>平台热线：100568</span>
+		</div>
+		<div class="yes">一键扫码，确认借书</div>
+		<div class="yes">取消订单</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

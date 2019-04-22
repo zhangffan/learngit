@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/iconfont.css" rel="stylesheet"/>
+    <style type="text/css">
+    	/*.mui-content{
+    		position: absolute;
+    		z-index: 1;
+    	}
+    	#topPopover{
+	    	position: absolute;
+	    	width: 100%; 
+			height: 610px;
+			z-index: 998;
+			background-color: rgba(0,0,0,0.5);
+	    	display: none;	
+	    }*/
+	    #top{
+	    	background: #f37e0d;
+	    	height: 50px;
+	    }
+    	#search{
+    		width: 80%;
+    		height: 30px;
+    		border-radius: 10px;
+    	}
+    	#sch{
+    		position: relative;
+    		left: -50px;
+    	}
+    	.mui-slider{
+    		top: 44px;
+    		height: 200px;
+    	}
+    	#nav{
+    		margin-top: 50px;
+    		background: #fff;
+    	}
+    	.nav{
+    		width: 50px;
+    		padding: 0px;
+    		margin: 30px;
+    	}
+    	.word{
+    		text-align: center;
+    		padding: 10px;
+    	}
+    	.title{
+    		margin-top: 10px;
+    	}
+    	.mui-card-header img{
+    		width: 35px;
+    		height: 35px;
+    	}
+    	.mui-bar-tab{
+    		
+    	}
+    	
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<!--标题栏-->
+	
+	<div class="mui-content">
+		<header class="mui-bar mui-bar-nav" id="top">
+			<div id="head">
+				<input type="text" placeholder="搜索书名、作者" id="search" />
+				<span class="mui-icon mui-icon-search" id="sch"></span>
+				<span class="mui-icon mui-icon-bars" id="c1"></span>
+			</div>
+		</header>
+		
+		<div class="mui-slider">
+		  	<div class="mui-slider-group mui-slider-loop">
+		  		<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/timg3.jpg" /></a></div>
+			    <div class="mui-slider-item"><a href="#"><img src="images/timg.jpg" /></a></div>
+			    <div class="mui-slider-item"><a href="#"><img src="images/timg1.jpg" /></a></div>
+			    <div class="mui-slider-item"><a href="#"><img src="images/timg3.jpg" /></a></div>
+			    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/timg.jpg" /></a></div>
+		  	</div>
+		  	<div class="mui-slider-indicator">
+			  	<div class="mui-indicator mui-active" onclick="showto(0);"></div>
+			  	<div class="mui-indicator" onclick="showto(1);"></div>
+			  	<div class="mui-indicator" onclick="showto(2);"></div>
+			  </div>
+		</div>
+		
+		<div id="nav">
+			<a class="nav" id="b1">
+				<span class="mui-icon mui-icon-upload"></span>
+	            <span class="word">最新上架</span>
+			</a>
+			<a class="nav" id="b2">
+				<span class="mui-icon mui-icon-home"></span>
+	            <span class="word">热门排行</span>
+			</a>
+			<a class="nav" id="b3">
+				<span class="mui-icon mui-icon-list"></span>
+	            <span class="word">精选书单</span>
+			</a>
+			<a class="nav" id="b4">
+				<span class="mui-icon mui-icon-home"></span>
+	            <span class="word">我的书房</span>
+			</a>
+		</div>
+		<div class="title">推荐书目</div>
+		
+		<div class="mui-card-header mui-card-media">
+			<img src="images/a1.jpg" class="b"/>
+			<div class="mui-media-body">
+				小学生进阶阅读
+				<p>租金：5元</p>
+			</div>
+		</div>
+		<div class="mui-card-header mui-card-media">
+			<img src="images/a2.jpg" class="b"/>
+			<div class="mui-media-body">
+				小学生必背古诗词
+				<p>租金：8元</p>
+			</div>
+		</div>
+		<div class="mui-card-header mui-card-media">
+			<img src="images/a3.jpg" class="b"/>
+			<div class="mui-media-body">
+				神秘岛
+				<p>租金：7元</p>
+			</div>
+		</div>
+		<div class="mui-card-header mui-card-media">
+			<img src="images/a4.jpg" class="b"/>
+			<div class="mui-media-body">
+				数学
+				<p>租金：6元</p>
+			</div>
+		</div>
+		<div class="mui-card-header mui-card-media">
+			<img src="images/a5.jpg" class="b"/>
+			<div class="mui-media-body">
+				千字文
+				<p>租金：4元</p>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+		 	interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
+		});
+		function showto(index){
+			var gallery = mui('.mui-slider');
+			gallery.slider().gotoItem(index);
+		}
+		var input=document.getElementsByTagName("input")[0];
+		input.onfocus=function(){
+			this.value="";
+		}
+		input.onblur=function(){
+			this.value="搜索书名、作者";
+		}
+
+		
+		
+
+
+		mui.plusReady(function(){
+			
+			
+			var img=document.getElementsByClassName('b');
+			//for(int i=0;i<img.length;i++){
+			//	show(i);
+			//}
+			//function show(i){
+				img[0].onclick=function(){
+					mui.openWindow({
+			 			url : 'book.html',
+			 			id  : 'book.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+		 			})
+				}
+				img[1].onclick=function(){
+					mui.openWindow({
+			 			url : 'book.html',
+			 			id  : 'book.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+		 			})
+				}
+				img[2].onclick=function(){
+					mui.openWindow({
+			 			url : 'book.html',
+			 			id  : 'book.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+		 			})
+				}
+				img[3].onclick=function(){
+					mui.openWindow({
+			 			url : 'book.html',
+			 			id  : 'book.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+		 			})
+				}
+			//}
+			document.getElementById('b1').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'zuixin.html',
+		 			id  : 'zuixin.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			document.getElementById('b2').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'remen.html',
+		 			id  : 'remen.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			document.getElementById('b3').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'jingxuan.html',
+		 			id  : 'jingxuan.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			document.getElementById('b4').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'chenzilin/shufang1.html',
+		 			id  : 'chenzilin/shufang1.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			document.getElementById('c1').addEventListener('tap',function(){
+    			
+	    		mui.openWindow({
+		 			url : 'jieyue.html',
+		 			id  : 'jieyue.html',
+		 			styles:{
+				      	top: '0px',//设置距离顶部的距离
+		                bottom: '0px'//设置距离底部的距离
+		                //popGesture: "close"
+				   	},
+				   	show:{
+				      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+				      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				    },
+				    waiting:{
+				      	autoShow:false,//自动显示等待框，默认为true
+				      	title:'正在加载...',//等待对话框上显示的提示内容
+				      	
+				    }
+		 		})
+    		})
+			
+		});
+		
+
+	</script>
+
+</body>
+</html>

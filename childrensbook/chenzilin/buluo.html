@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		.mui-icon-search{
+			float:right;
+		}
+		td{
+			padding:5px;
+		}
+		.mui-title{
+			position:relative;
+			left:20px;
+		}
+		.mui-icon-back{
+			position:relative;
+			top:-20px;
+		}
+		.mui-icon-search{
+			position:relative;
+			top:4px;
+		}
+		.word{
+				position:relative;
+				top:30px;
+				left:30px;
+				
+			}
+		.border{
+				width:300px;
+				height:100px;
+				border:1px solid black;
+			}
+				
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">	
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<table class="mui-title">
+    <tr>
+        <td style="color:orange">推荐</td>
+        <td>关注</td>
+        <td>活动</td>
+    </tr>
+    </table>
+		<span class="mui-icon mui-icon-search"></span>
+		</header>
+		<div class="mui-content mui-scroll-wrapper"> 
+		<div class="word">
+		<span>评价</span>
+		<div class="border"></div>
+		<pre>作者     点赞      评论     来源</pre>
+		</div>
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

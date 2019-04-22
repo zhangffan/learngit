@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+			document.getElementById('b1').addEventListener('tap',function(){	
+		    	mui.openWindow({
+			 		url : '../chenzilin/fukuan2.html',
+			 		id  : '../chenzilin/fukuan2.html',
+			 		styles:{
+					    top: '0px',//设置距离顶部的距离
+			            bottom: '0px'//设置距离底部的距离
+			            //popGesture: "close"
+					},
+					show:{
+					    autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					    aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					    duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					},
+					waiting:{
+					    autoShow:false,//自动显示等待框，默认为true
+					    title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					}
+			 	})	
+    		})
+			
+		})
+    </script>
+</head>
+	<body>
+		<nav class="mui-bar mui-bar-nav" style="position: absolute;" >
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<span style="position: absolute;top: 10px;left: 50px;">确认订单</span>
+		</nav>
+		<div class="mybor" style="position: relative;top: 45px;">
+			<img src="img/touxiang.jpg" style="width: 60px;height: 60px;line-height: 60px;margin-top: 20px;margin-left: 10px;float: left;" />
+			<div style="margin-left: 5px;float: left;">XX平台</div>
+			<div class="mui-icon mui-icon-location" style="margin-left:100px;float: left;"></div>
+			<div style="float: left;width:100px;">100m</div>
+			<div style="margin-left: 0px;float: left;width: 200px;">地址：XX街道XX号</div>
+		</div>
+		<div class="mybor">
+			<img src="img/timg.jpg" style="height: 90px;position: relative;top: 26px;float: left;" />
+			<div style="position:relative;top: 20px;">
+				<span>书名：《火山为什么会爆发呢？》</span>
+				<span>租金：XXX</span><br />
+				<span>押金：XXX</span>
+			</div>
+		</div>
+		<div style="position: relative;left: 30px;">
+			<span>取书时长：</span>
+			<input type="text" style="width:150px;"/>
+		</div>
+		<span style="position: relative;left: 40px;font-size: 13px;">注：超时三天未取书则自动取消订单</span>
+		<div class="mybor">
+			<span>留言</span>
+		</div>
+		<div class="mybor" style="height: 40px;text-align: center;">
+			<span>客服电话：6666666</span>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+			<div style="width: 200px;text-align: right;">
+				<span>合计：</span>
+				<span></span>
+			</div>
+			<a class="mui-tab-item mycolor"  href="" style="width: 100px;">
+			  <span class="mui-tab-label" style="color: white;" id="b1">提交订单</span>
+		    </a>
+		</nav>
+	</body>
+</html>

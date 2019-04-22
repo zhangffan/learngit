@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-bar{
+				background: lightsalmon;
+			}
+			h1{
+				text-align: center;
+				
+			}
+			.message{
+				margin-top: 44px;
+				
+			}
+			.tou{
+				margin-top:10px;
+				width: 34px;
+				height: 34px;
+				border-radius: 50%;
+				float: left;
+			}
+			.people span{
+				float: left;
+				margin-right: 22px;
+				margin-left: 13px;
+				margin-top: 20px;
+			}
+			.book{
+				float: left;
+				margin-top: 30px;
+				margin-left: 0px;
+			}
+			.book img{
+				float: left;
+				width: 150px;
+				height: 150px;
+				
+			}
+			.book span{
+				margin-left: 50px;
+				margin-right: 100px;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>借阅车</h1>
+		</header>
+		<div  class="message">
+			<div class="people">
+				<img src="images/a1.jpg" class="tou"/>
+				<span>李四</span>
+				<span>地址：xxx小区</span>
+				<span class="mui-icon mui-icon-location">50m</span>
+			</div>
+			<div class="book">
+				<img src="images/a1.jpg" id="b1"/>
+				<span>作者</span>
+				<span>书名</span>
+			</div>
+		</div>
+		<div  class="message">
+			<div class="people">
+				<img src="images/a2.jpg" class="tou"/>
+				<span>自营</span>
+				<span>地址：xxx街道</span>
+				<span class="mui-icon mui-icon-location">90m</span>
+			</div>
+			<div class="book">
+				<img src="images/a2.jpg" id="b2"/>
+				<span>作者</span>
+				<span>书名</span>
+			</div>
+		</div>
+		<div  class="message">
+			<div class="people">
+				<img src="images/a3.jpg" class="tou"/>
+				<span>张三</span>
+				<span>地址：xxx小区</span>
+				<span class="mui-icon mui-icon-location">80m</span>
+			</div>
+			<div class="book">
+				<img src="images/a3.jpg" id="b3"/>
+				<span>作者</span>
+				<span>书名</span>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('b1').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'yuanchen/dingdangeren.html',
+			 			id  : 'yuanchen/dingdangeren.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('b2').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'yuanchen/dingdanpingtai.html',
+			 			id  : 'yuanchen/dingdanpingtai.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('b3').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'yuanchen/dingdangeren.html',
+			 			id  : 'yuanchen/dingdangeren.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+			})
+		</script>
+	</body>
+
+</html>

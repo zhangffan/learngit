@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	    <style>
+	    	.mui-active{
+	    		background: lightgrey;
+	    	}
+	    	.mui-bar{
+	    		background: lightsalmon;
+	    	}
+	    	.myNav{
+	    		width: 30px;
+	    		height: 40px;
+	    		line-height: 40px;
+	    		color: white;
+	    		font-size: 20px;
+	    	}
+	    	/*#topPopover{
+	    		position: absolute;
+	    		width: 100%; 
+			    height: 610px;
+			    z-index: 998;
+			    background-color: rgba(0,0,0,0.5);
+	    		display: none;
+	    	}*/
+	    	
+	    </style>
+	</head>
+<body>
+	
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="index.html">
+				<img src="img/shouye.png" class="mui-icon"/>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="yuanchen/lianxiren.html">
+				<img src="img/chat.png" class="mui-icon" />
+				<span class="mui-tab-label">联系人</span>
+			</a>
+			<a class="mui-tab-item" href="03.html" id="mask">
+				<img src="img/icon-test.png" class="mui-icon"/>
+			</a>
+			<a class="mui-tab-item" href="chenzilin/buluo1.html">
+				<img src="img/faxian.png" class="mui-icon"/>
+				<span class="mui-tab-label">部落</span>
+			</a>
+			<a class="mui-tab-item" href="my.html">
+				<img src="img/wode.png" class="mui-icon"/>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<!--<div id="topPopover">
+			
+		</div>
+		<div id="choose">
+			扫码上传
+			扫码借书
+		</div>-->
+		<script type="text/javascript">
+			var subPages = ['index.html', 'yuanchen/lianxiren.html', '03.html','chenzilin/buluo1.html','my.html'];
+			var subStyle = {
+				top: '0px',
+				bottom: '50px'
+			}
+		
+			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				for(var i = 0; i < 5; i++) {
+					var sub = plus.webview.create(subPages[i], subPages[i], subStyle);
+					sub.hide();
+					self.append(sub);
+				}
+				plus.webview.show(subPages[0]);
+				
+				/**/
+				/*var topPopoverBtn=doucument.getElementById("topPopover");
+				topPopoverBtn.addEventListener("tap",function(){
+					var child=plus.webview.getWebviewById("index");
+					mui.fire(child,"topPopover");
+				})*/
+				/*var mask=document.getElementById("mask");
+				var topPopover=document.getElementById("topPopover");
+				mask.onclick=function(){
+					topPopover.style.display="block";
+				}*/
+			});
+			mui(".mui-bar-tab").on("tap", "a", function(e) {
+				var tag = this.getAttribute("href");
+				plus.webview.show(tag, "fade-in", 100);
+			});
+		</script>
+
+	</body>
+</html>

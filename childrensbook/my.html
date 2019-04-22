@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="bookshare/css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="bookshare/css/setting2.css" />
+		
+		<style type="text/css">
+			.mui-btn-danger{
+				width: 94%;
+				margin-left:3%;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	
+	
+<body>
+<div class="mui-content">
+	    
+		<header id="header" class="mui-bar mui-bar-nav" style="background: rgba(1,1,1,0);">
+			
+			<a id="icon-menu" class="mui-icon mui-icon-gear mui-pull-right" style="color: black"></a>
+			
+			<div class="cricle"></div>
+			<div class="name">
+				<p>喵喵喵</p>
+				<p>6岁</p>
+			</div>
+			
+		</header>
+		
+		<!--
+        	作者：zhangfeifancool@163.com
+        	时间：2019-01-21
+        	描述：名片
+        -->
+		<div class="namecard">
+				<!--
+	            	作者：zhangfeifancool@163.com
+	            	时间：2019-01-21
+	            	描述：头像
+	            -->
+				<div class="namecard-left" >
+					
+				</div>
+				<!--
+	            	作者：zhangfeifancool@163.com
+	            	时间：2019-01-21
+	            	描述：用户名
+	            -->
+			
+		</div>
+		<!--
+        	作者：zhangfeifancool@163.com
+        	时间：2019-01-21
+        	描述：三项数据
+        -->
+        
+        <div class="mui-card" style="border-radius: 10px;">
+		
+		</div>
+		<!--
+        	作者：zhangfeifancool@163.com
+        	时间：2019-01-21
+        	描述：LIST
+        -->
+        <div class="mui-card" style="border-radius: 10px;">
+        <ul class="mui-table-view three-settings">
+		    <li class="mui-table-view-cell" id="a1">
+		    	<span class="left-icon mui-icon mui-icon-home" ></span>
+		        <p >我的书房</p>
+		        <span class="right-icon mui-icon mui-icon-arrowright" ></span>
+		    </li>
+		    <li class="mui-table-view-cell" id="a2">
+		    	<span class="left-icon mui-icon mui-icon-redo" ></span>
+		        <p >借入订单</p>
+		        <span class="right-icon mui-icon mui-icon-arrowright" ></span>
+		    </li>
+		    <li class="mui-table-view-cell" id="a3">
+		    	<span class="left-icon mui-icon mui-icon-undo" ></span>
+		        <p >借出订单</p>
+		        <span class="right-icon mui-icon mui-icon-arrowright" ></span>
+		    </li>
+		</ul>
+		</div>
+        <div class="mui-card" style="border-radius: 10px;">
+        <ul class="mui-table-view three-settings">
+		    <li class="mui-table-view-cell" id="a4">
+		    	<span class="left-icon mui-icon mui-icon-contact" ></span>
+		        <p >个人资料</p>
+		        <span class="right-icon mui-icon mui-icon-arrowright" ></span>
+		    </li>
+		    <li class="mui-table-view-cell" id="a5">
+		    	<span class="left-icon mui-icon mui-icon-pengyouquan" ></span>
+		        <p >我的钱包</p>
+		        <span class="right-icon mui-icon mui-icon-arrowright" ></span>
+		    </li>
+		    <li class="mui-table-view-cell" id="a6">
+		    	<span class="left-icon mui-icon mui-icon-star" ></span>
+		        <p >我的评价</p>
+		        <span class="right-icon mui-icon mui-icon-arrowright" ></span>
+		    </li>
+		</ul>
+		</div>
+		<div class="mui-card" style="border-radius: 10px;">
+        <ul class="mui-table-view three-settings">
+		    <li class="mui-table-view-cell" id="a7">
+		    	<span class="left-icon mui-icon mui-icon-starhalf" ></span>
+		        <p >借阅车</p>
+		        <span class="right-icon mui-icon mui-icon-arrowright" ></span>
+		    </li>
+		    <li class="mui-table-view-cell" id="a8">
+		    	<span class="left-icon mui-icon mui-icon-email" ></span>
+		        <p >我的消息</p>
+		        <span class="right-icon mui-icon mui-icon-arrowright" ></span>
+		    </li>
+		    <li class="mui-table-view-cell" id="a9">
+		    	<span class="left-icon mui-icon mui-icon-paperclip" ></span>
+		        <p >借阅指南</p>
+		        <span class="right-icon mui-icon mui-icon-arrowright" ></span>
+		    </li>
+		</ul>
+		</div>
+		
+</div>
+	
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('a1').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'chenzilin/shufang1.html',
+			 			id  : 'chenzilin/shufang1.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a2').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'bookshare/wuliu.html',
+			 			id  : 'bookshare/wuliu.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a3').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'bookshare/wuliu.html',
+			 			id  : 'bookshare/wuliu.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a4').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'ruanzeqi/b.html',
+			 			id  : 'ruanzeqi/b.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a5').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'chenzilin/yue.html',
+			 			id  : 'chenzilin/yue.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a6').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'chenzilin/pingjia.html',
+			 			id  : 'chenzilin/pingjia.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a7').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'qushu.html',
+			 			id  : 'qushu.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a8').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'chenzilin/mymessage.html',
+			 			id  : 'chenzilin/mymessage.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+			})
+			 
+			
+		</script>
+</body>
+
+</html>
+
+

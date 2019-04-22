@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+			.pic{
+				width:100px;
+				height:100px;
+			}
+			.word{
+				position:relative;
+				top:-90px;
+				left:130px;
+				
+			}
+			.word1{
+				position:relative;
+				top:-80px;
+				left:130px;
+			}
+			.word2{
+				position:relative;
+				top:-70px;
+				left:130px;
+			}
+			.pic1{
+				position:relative;
+				top:20px;
+				left:20px;
+			}
+			.pic2{
+				width:100px;
+				height:10px;
+				position:relative;
+				top:-175px;
+				left:240px;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">	
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">我的书房</h1>
+		</header>
+		<div class="mui-content mui-scroll-wrapper"> 
+		<div>
+		<table border="1" class="mui-table">
+          <tr>
+             <td>全部</td>
+             <td>平台共享</td>
+             <td>个人共享</td>
+          </tr>
+        </table>
+       </div>
+        <div class="pic1">
+       	<img src="icon/1.jpg" class="pic" id="b1">
+       	<div>
+       	<span class="word">书名xxx</span>
+       	<br>
+       	<span class="word1">永久共享定价:xxx元</span>
+       	<br>
+       	<span class="word2">租金：xxx元/天</span>、
+       	</div>
+       	<div>
+       	<form action="" class="pic2">
+         <select name="shu">
+         <option value="永久共享">永久共享</option>
+         <option value="个人">个人</option>
+         </select>
+        </form>
+       	</div>    	
+       </div>
+       <hr>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('b1').addEventListener('tap',function(){
+    				mui.openWindow({
+				 			url : '../ruanzeqi/c1.html',
+				 			id  : '../ruanzeqi/c1.html',
+				 			styles:{
+						      	top: '0px',//设置距离顶部的距离
+				                bottom: '0px'//设置距离底部的距离
+				                //popGesture: "close"
+						   	},
+						   	show:{
+						      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+						      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+						      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						    },
+						    waiting:{
+						      	autoShow:false,//自动显示等待框，默认为true
+						      	title:'正在加载...',//等待对话框上显示的提示内容
+						      	
+						    }
+				 		})
+		    		
+    			})
+				
+			})
+		</script>
+	</body>
+
+</html>

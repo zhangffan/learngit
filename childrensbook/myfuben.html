@@ -1,0 +1,487 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.my{
+				padding: 10px;
+				height: 90px;
+				background: #f8f8e0;
+			}
+			#name{
+				margin-top: 20px;
+			}
+			#b1{
+				position: relative;
+				top: -20px;
+			}
+			.tou{
+				float: left;
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+			}
+			.my span{
+				float: left;
+				margin-left: 20px;
+				margin-right: 100px;
+			}
+			.my .she{
+				margin-right: 0px;
+				margin-top: 10px;
+				float: right;
+			}
+			.list ul{
+				background: #fff;
+				width: 100%;
+			}
+			.list .a1{
+				position: relative;
+				left: -8px;
+			}
+			.list .mui-icon-email{
+				position: relative;
+				left: 15px;
+			}
+			.list1{
+				float: left;
+				margin-top: 10px;
+				
+			}
+			.list1 ul{
+				background: #fff;
+				width: 103%;
+			}
+			.list1 p{
+				position: relative;
+				left: -8px;
+			}
+			ul{
+				float: left;
+				list-style: none;
+				
+				
+			}
+			ul li{
+				float: left;
+				margin-right: 35px;
+			}
+			a{
+				text-decoration: none;
+			}
+			.title1{
+				width: 100px;
+			}
+			.list2 p{
+				position: relative;
+				left: -16px;
+			}
+			.list2 ul{
+				background: #fff;
+				width: 100%;
+			}
+			.list2 ul li{
+				margin-right: 20px;
+			}
+			#yu ul{
+				background: #fff;
+				width: 360px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div class="my">
+				<img src="images/5.png" class="tou"/>
+				<span id="name">乌唧唧</span>
+				<span>男 </span>
+				<span class="she" id="b1">查看个人信息</span>
+			</div>
+			<div class="list">
+				<ul>
+					<li id="c1"><a><span class="mui-icon mui-icon-starhalf"></span><p class="a1">借阅车</p></a></li>
+					<li id="c2"><a><span class="mui-icon mui-icon-home"></span><p>书房</p></a></li>	
+					<li id="c3"><a><span class="mui-icon mui-icon-email"></span><p>我的消息</p></a></li>
+					<li id="c4"><a><span class="mui-icon mui-icon-star"></span><p>评价</p></a></li>
+				</ul>
+			</div>
+			<div class="title1">借入订单</div>
+			<div class="list1">
+				<ul>
+					<li id="a1"><a><span class="mui-icon mui-icon-redo"></span><p>待取书</p></a></li>
+					<li id="a2"><a><span class="mui-icon mui-icon-undo"></span><p>待归还</p></a></li>	
+					<li id="a3"><a><span class="mui-icon mui-icon-refreshempty"></span><p>待取消</p></a></li>
+					<li id="a4"><a><span class="mui-icon mui-icon-trash"></span><p>已取消</p></a></li>
+				</ul>
+			</div>
+			<div class="title1">借出订单</div>
+			<div class="list1">
+				<ul>
+					<li id="d1"><a><span class="mui-icon mui-icon-redo"></span><p>待取书</p></a></li>
+					<li id="d2"><a><span class="mui-icon mui-icon-undo"></span><p>待归还</p></a></li>	
+					<li id="d3"><a><span class="mui-icon mui-icon-refreshempty"></span><p>待取消</p></a></li>
+					<li id="d4"><a><span class="mui-icon mui-icon-trash"></span><p>已取消</p></a></li>
+				</ul>
+			</div>
+			<div class="title1">我的钱包</div>
+			<div class="list1" id="yu">
+				<ul>
+					<li><a><span class="mui-icon mui-icon-more" id="e1"></span><p>可用余额</p></a></li>
+					
+				</ul>
+			</div>
+			<div class="title1">我的服务</div>
+			<div class="list2">
+				<ul>
+					<li id="f"><a><span class="mui-icon mui-icon-compose"></span><p>出借须知</p></a></li>
+					<li><a><span class="mui-icon mui-icon-paperclip"></span><p>借阅指南</p></a></li>	
+					<li><a><span class="mui-icon mui-icon-phone"></span><p>意见反馈</p></a></li>
+					<li><a><span class="mui-icon mui-icon-help"></span><p>常见问题</p></a></li>
+					<li><a><span class="mui-icon mui-icon-contact"></span><p>关于我们</p></a></li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('b1').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'ruanzeqi/b.html',
+			 			id  : 'ruanzeqi/b.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('c1').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'jieyue.html',
+			 			id  : 'jieyue.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('c2').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'chenzilin/shufang.html',
+			 			id  : 'chenzilin/shufang.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('c3').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'chenzilin/mymessage.html',
+			 			id  : 'chenzilin/mymessage.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('c4').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'chenzilin/pingjia.html',
+			 			id  : 'chenzilin/pingjia.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a1').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'qushu.html',
+			 			id  : 'qushu.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a2').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'huaishu.html',
+			 			id  : 'huaishu.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a3').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'daiquxiao.html',
+			 			id  : 'daiquxiao.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('a4').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'yiquxiao.html',
+			 			id  : 'yiquxiao.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('d1').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'qushu.html',
+			 			id  : 'qushu.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('d2').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'huaishu2.html',
+			 			id  : 'huaishu2.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('d3').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'daiquxiao.html',
+			 			id  : 'daiquxiao.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('d4').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'yiquxiao.html',
+			 			id  : 'yiquxiao.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('e1').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'chenzilin/yue.html',
+			 			id  : 'chenzilin/yue.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				document.getElementById('f').addEventListener('tap',function(){
+    			
+		    		mui.openWindow({
+			 			url : 'bookshare/wuliu.html',
+			 			id  : 'bookshare/wuliu.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+			})
+		</script>
+	</body>
+
+</html>

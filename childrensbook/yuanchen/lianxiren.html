@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	
+    </script>
+    <style>
+    	.mui-bar{
+    		height: 75px;
+    	}
+    	img{
+    		width: 45px;
+    		height: 45px;
+    		float: left;
+    	}
+    	.mySpan{
+    		font-weight: bold;
+    		font-size: 16px;
+    		left: 100px;
+    		top: 10px;
+    		float: left;
+    	}
+    	a{
+    		width: 40px;
+    		height: 40px;
+    		float: right;
+    		margin-top: 15px;
+    		font-weight: bold;
+    	}
+    	.mysousuo{
+    		position: relative;
+    		top: 60px;
+    		height: 40px;
+    		text-align: center;
+    		background: lightgray;
+    	}
+    	.newFriend{
+    		background: white;
+    		position: relative;
+    		top: 40px;
+    		height: 50px;
+    		line-height: 50px;
+    	}
+    	.choice{
+    		position: relative;
+    		top: 39px;
+    		margin: 0px;
+    	}
+    	.choice div{
+    		background: white;
+    		border: 1px solid black;
+    		width:50%;
+    		height: 40px;
+    		margin: 0px;
+    		float: left;
+    		line-height: 40px;
+    		text-align: center;
+    	}
+    	.mya{
+    		float: none;
+    		margin: 0px;
+    	}
+    	.mui-table-view{
+    		position: relative;
+    		top: 80px;
+    	}
+    	.myhaoyou{
+    		display: none;
+    	}
+    </style>
+</head>
+	<body>
+	<header class="mui-bar mui-bar-nav">
+			<div>
+				<img src="img/touxiang.jpg" />
+				<a href="">添加</a>
+			</div>
+			<span class="mySpan">联系人</span>
+		</header>	
+		<div class="mybor mysousuo">
+			<span class="mui-icon mui-icon-search"></span>
+			<input type="text" style="width: 80%;color: grey;" value="搜索"/>
+		</div>
+		<div class="mybor newFriend">
+			<span style="font-weight: bold;">新朋友</span>
+			<span class="mui-icon mui-icon-forward" style="float: right;line-height: 50px;"></span>
+		</div>
+		<div class="choice">
+			<div><a href="" class="mya">好友</a></div>
+			<div><a href="" class="mya">群聊</a></div>
+		</div>
+		<ul class="mui-table-view myhaoyou">
+            <li class="mui-table-view-cell">好友1
+                <span class="mui-badge">11</span>
+            </li>
+            <li class="mui-table-view-cell">好友 2 
+                <span class="mui-badge">22</span>
+            </li>
+            <li class="mui-table-view-cell">好友 3 
+                <span class="mui-badge">33</span>
+            </li>
+        </ul>
+        <ul class="mui-table-view myqun">
+        	<li class="mui-table-view-cell">
+        		<span class="mui-icon mui-icon-plusempty"></span>
+			    <span>创建群聊</span>
+        	</li>
+            <li class="mui-table-view-cell">我创建的群聊
+                <span class="mui-badge">11</span>
+            </li>
+            <li class="mui-table-view-cell">我管理的群聊 
+                <span class="mui-badge">22</span>
+            </li>
+            <li class="mui-table-view-cell">我加入的群聊
+                <span class="mui-badge">33</span>
+            </li>
+        </ul>
+	</body>
+</html>

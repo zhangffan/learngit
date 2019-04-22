@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		body{
+			background: url(../images/1.jpg);
+		}
+		.input{
+			text-align: center;
+			margin-top: 80px;
+		}
+		#age{
+			
+		}
+		.xiala{
+			width:80%;
+			position:relative;
+			left:40px;
+			top:20px;
+		}	
+		.word{
+			margin-top:30px;
+			text-align:center;
+		}
+		.button{
+			margin-top:80px;
+			margin-left:150px;
+		}
+		.word1{
+			text-align: center;
+			margin-top: 20px;
+			
+		}
+		.word2{
+			position:relative;
+			top:10px;
+		}
+		.word3{
+			position:relative;
+			top:20px;
+		}
+		#btn{
+			margin-top: 30px;
+			margin-left: 150px;
+		}
+		</style>
+	</head>
+
+	<body>
+	<div class="content">
+		<div class="input">
+			<div id="age">请选择你的年龄</div>
+			<form action="" class="xiala">
+	        <select name="age">
+	        <option value="低年级">幼儿阶段(0-3岁)</option>
+	        <option value="中年级">学前儿童(4-6岁)</option>
+	        <option value="高年级">小学生(7-12岁)</option>
+	        
+	        </select>
+	        </form>
+		</div>
+		<div class="word" style="margin-bottom: 40px;">
+			<span>请选择喜欢的图书类型</span>
+		</div>
+		<div class="word1">
+			<form>
+				<div>
+			        <input type="checkbox" name="shu" value="会图书" class="c">儿童文学
+			        <input type="checkbox" name="shu" value="故事书" class="c">进口儿童书
+			        <input type="checkbox" name="shu" value="必读书目" class="c">图画书<br>
+			    </div>
+			    <div class="word2">
+			        <input type="checkbox" name="shu" value="小说文学" class="c">故事书
+			        <input type="checkbox" name="shu" value="辅助教材" class="c">卡通/漫画
+			        <input type="checkbox" name="shu" value="人文社科" class="c">科普百科<br>
+			    </div>
+			    <div class="word3">
+			        <input type="checkbox" name="shu" value="漫画绘本" class="c">幼儿启蒙
+			        <input type="checkbox" name="shu" value="英语读目" class="c">少儿英语
+			        <input type="checkbox" name="shu" value="课外书目" class="c">励志/成长<br>
+			    </div>
+			</form>	 
+		</div>	
+		
+		<button type="button" id="btn">全选</button>
+		
+		
+		<div class="button">
+			
+			<button type="button" class="mui-btn mui-btn-danger" id="b1">确认</button>
+		</div>
+	</div>
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				document.getElementById('b1').addEventListener('tap',function(){
+		    		mui.openWindow({
+			 			url : '../dibulan.html',
+			 			id  : '../dibulan.html',
+			 			styles:{
+					      	top: '0px',//设置距离顶部的距离
+			                bottom: '0px'//设置距离底部的距离
+			                //popGesture: "close"
+					   	},
+					   	show:{
+					      	autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      	aniShow:'none',//页面显示动画，默认为”slide-in-right“；
+					      	duration:100//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      	autoShow:false,//自动显示等待框，默认为true
+					      	title:'正在加载...',//等待对话框上显示的提示内容
+					      	
+					    }
+			 		})
+    			})
+				
+				//全选
+				var allcheck=document.getElementsByClassName("c");
+				var btn=document.getElementById("btn");
+				btn.onclick=function(){
+					for(var i=0;i<allcheck.length;i++){
+						allcheck[i].checked="checked";
+					}
+				}
+				
+			})
+		</script>
+	</body>
+
+</html>

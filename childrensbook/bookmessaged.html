@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-bar{
+				background: lightsalmon;
+			}
+			h1{
+				text-align: center;
+			}
+			.book{
+				margin-top: 44px;
+				padding: 20px 120px;
+			}
+			.book img{
+				width: 150px;
+				height: 200px;
+			}
+			.name{
+				margin-left: 180px;
+			}
+			span{
+				display: block;
+				margin-top: 40px;
+			}
+			.false{
+				border: 1px solid red;
+				margin-top: 80px;
+				width: 100px;
+				height: 40px;
+				text-align: center;
+				margin-right: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>个人书信息</h1>
+		</header>
+		<div class="book">
+			<img src="images/a3.jpg" />
+		</div>
+		<div class="name">神秘岛</div>
+		<span>拥有人：张三</span>
+		<span>借书时长：3个月</span>
+		<button type="button">修改时长</button>
+		<button type="button" class="false">订单取消</button>
+		<button type="button" class="false">联系借书人</button>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>
